@@ -83,7 +83,9 @@ html, body {
     width: 100%;
     margin-bottom: 2px;
 }
-
+.body {
+    
+}
 .ocultar-menu {
     display: none;
 }
