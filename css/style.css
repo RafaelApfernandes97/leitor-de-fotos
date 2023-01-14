@@ -90,6 +90,9 @@ html, body {
     display: none;
 }
 
+
+
+
 @media screen and (max-width:900px) {
     .lista-img {
         margin-top: 50px;
@@ -115,3 +118,21 @@ html, body {
     }
     
 }
+
+body:before{
+    content: url('/img/DIVULGAÇÃO\ PROIBIDA\ BALLET\ EM\ FOCO.png');
+    z-index: -1;
+    opacity: 0.3;
+    position: fixed;
+    z-index: 999;
+  }
+
+
+
+/* .main {
+    background-image: url(/img/DIVULGAÇÃO\ PROIBIDA\ BALLET\ EM\ FOCO.png);
+    background-size: 100% 100%;
+    filter: alpha(opacity=50);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+    opacity: .50;
+} */
