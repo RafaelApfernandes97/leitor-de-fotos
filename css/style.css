@@ -117,28 +117,9 @@ html, body {
         margin-bottom: 2px;
     }
     
-    body:before{
-        content: url('/img/2.png');
-        opacity: 0.4;
-        position: fixed;
-        left: 10%;
-        top:-10%;
-        z-index: 999;
-      }
+    
 }
 
-@media screen and (max-width:500px) {
-    
-    
-    body:before{
-        content: url('/img/1.png');
-        opacity: 0.4;
-        position: fixed;
-        left: 0%;
-        top: 10%;
-        z-index: 999;
-      }
-}
 
 
 
