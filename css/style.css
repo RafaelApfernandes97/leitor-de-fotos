@@ -17,7 +17,7 @@ html, body {
 
 
 
-.categorias {
+.coreografias {
     margin-top: 70px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -29,7 +29,7 @@ html, body {
     text-decoration: none;
 }
 
-.card_categorias {
+.card_coreografias {
     border: 1px solid;
     border-radius: 5px;
     margin: 5px;
