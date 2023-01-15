@@ -120,11 +120,11 @@ html, body {
 }
 
 body:before{
-    content: url('/img/DIVULGAÇÃO\ PROIBIDA\ BALLET\ EM\ FOCO.png');
+    content: url('/img/1.png');
     
     opacity: 0.4;
     position: fixed;
-    left: 25%;
+    left: %;
     z-index: 999;
   }
 
