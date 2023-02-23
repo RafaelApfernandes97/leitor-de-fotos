@@ -1,3 +1,32 @@
+* {
+    -webkit-touch-callout: none; /* desabilita o menu do link de imagem */
+    -webkit-user-select: none; /* desabilita a seleção de texto */
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  
+}
+
+img {
+    position: relative;
+  }
+  
+  img:after {
+    content: "";
+    background-image: url(/marcadagua/1.png);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
 html, body {
 	width: 100%;
 	
@@ -13,6 +42,10 @@ html, body {
 
 .menu {
     background-color: rgb(5, 5, 5);
+}
+
+.margin-botom{
+    margin-bottom: 30px;
 }
 
 
@@ -90,13 +123,14 @@ html, body {
     display: none;
 }
 
+.menu-nav {
+    margin-bottom: 60px;
+}
 
 
 
 @media screen and (max-width:900px) {
-    .lista-img {
-        margin-top: 50px;
-    }
+  
 
     .img {
         width: 100%;
@@ -107,9 +141,7 @@ html, body {
 }
 
 @media screen and (max-width:1000px) {
-    .lista-img {
-        margin-top: 50px;
-    }
+  
 
     .img {
         width: 100%;
@@ -124,10 +156,77 @@ html, body {
 
 
 
-/* .main {
-    background-image: url(/img/DIVULGAÇÃO\ PROIBIDA\ BALLET\ EM\ FOCO.png);
-    background-size: 100% 100%;
-    filter: alpha(opacity=50);
-    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
-    opacity: .50;
+
+
+/* .marca_dagua {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    height: 110%;
+    top:-3%;
+    opacity: 0.5;
+    /* display: none; */
+    
+    
+    
 } */
+
+.nome_img {
+    position: absolute;
+    color: rgb(248, 248, 248);
+    background-color: black;
+    z-index: 999;
+}
+
+.label_img {
+    z-index: 999;
+}
+
+
+.checkbox {
+    position: absolute;
+    z-index: 999;
+}
+
+.checkbox_img {
+    position: absolute;
+    z-index: 999;
+}
+
+
+.botao_enviar {
+    z-index: 999;
+    width: 100px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    
+  }
+  
+
+.marcar_dagua {
+    opacity: 0.5;
+}
+
+ 
+ .lista-img {
+    position: relative;
+ }
+ 
+ .marca-dagua {
+    position: absolute; /* Define a posição do texto como absoluta */
+    top: 50%; /* Define a posição vertical como 50% (centro) */
+    left: 50%; /* Define a posição horizontal como 50% (centro) */
+    transform: translate(-50%, -50%); /* Centraliza o texto no centro da imagem */
+    z-index: 1; /* Define a ordem de empilhamento do texto como 1 (acima da imagem) */
+    color: #fff; /* Define a cor do texto como branco */
+  }
+
+
+.total_pedido {
+    font-weight: bold;
+    font-size: 18px;
+}
+  
