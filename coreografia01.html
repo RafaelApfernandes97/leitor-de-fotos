@@ -16,7 +16,7 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
     <script src="js/script.js"></script>
 
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -32,7 +32,7 @@
 
 <body class="body">
 
-   <div id="header"></div>
+    <div id="header"></div>
 
     <main>
         <script>
@@ -44,24 +44,35 @@
 
         <form id="myForm">
 
+
+
+            <div class="lista-img "> 
+
+
+                <img id="img" class="img watermark" src="/COREOGRAFIA 01/IMG_0001.JPG" alt=""
+                    onerror="erro(this)" onclick="toggleCheckbox(this)" style="opacity: 1;"
+                    onclick="countSelectedInputs()"> 
+                    
+                    
+                    <input class="checkbox" type="checkbox" name="imagens"
+                    value="IMG_0001.JPG" style="display: none;">
+                <div class="marca-dagua"> <img class="marca_dagua" src="img/2.png" alt=""> </div>
+            </div>
+
             <div class="lista-img "> <img id="img" class="img watermark" src="/COREOGRAFIA 01/IMG_0001.JPG" alt=""
                     onerror="erro(this)" onclick="toggleCheckbox(this)" style="opacity: 1;"
                     onclick="countSelectedInputs()"> <input class="checkbox" type="checkbox" name="imagens"
                     value="IMG_0001.JPG" style="display: none;">
                 <div class="marca-dagua"> <img class="marca_dagua" src="img/2.png" alt=""> </div>
             </div>
+
             <div class="lista-img "> <img id="img" class="img watermark" src="/COREOGRAFIA 01/IMG_0001.JPG" alt=""
                     onerror="erro(this)" onclick="toggleCheckbox(this)" style="opacity: 1;"
                     onclick="countSelectedInputs()"> <input class="checkbox" type="checkbox" name="imagens"
                     value="IMG_0001.JPG" style="display: none;">
                 <div class="marca-dagua"> <img class="marca_dagua" src="img/2.png" alt=""> </div>
             </div>
-            <div class="lista-img "> <img id="img" class="img watermark" src="/COREOGRAFIA 01/IMG_0001.JPG" alt=""
-                    onerror="erro(this)" onclick="toggleCheckbox(this)" style="opacity: 1;"
-                    onclick="countSelectedInputs()"> <input class="checkbox" type="checkbox" name="imagens"
-                    value="IMG_0001.JPG" style="display: none;">
-                <div class="marca-dagua"> <img class="marca_dagua" src="img/2.png" alt=""> </div>
-            </div>
+            
             <div class="lista-img "> <img id="img" class="img watermark" src="/COREOGRAFIA 01/IMG_0001.JPG" alt=""
                     onerror="erro(this)" onclick="toggleCheckbox(this)" style="opacity: 1;"
                     onclick="countSelectedInputs()"> <input class="checkbox" type="checkbox" name="imagens"
@@ -274,35 +285,35 @@
                     value="IMG_0022" style="display: none;">
                 <div class="marca-dagua"> <img class="marca_dagua" src="img/2.png" alt=""></div>
             </div>
-            
 
-           
-            
-            
+
+
+
+
             <div class="container form_pedido">
 
 
 
                 <h1 class="">Finalize o seu pedido</h1>
-    
+
                 <input class="form-control mb-2" type="text" placeholder="Nome" aria-label="default input " id="nome"
                     name="nome">
-    
+
                 <div>
                     <p class="total_pedido" id="count"></p>
                 </div>
-    
+
                 <select id="pagamento" class="form-select form-select-sm" aria-label=".form-select-sm ">
                     <option id="pagamento" selected>Forma de pagamento</option>
                     <option id="pagamento" value="Cartão">Cartão</option>
                     <option id="pagamento" value="Pix">Pix</option>
                     <option id="pagamento" value="Dinheiro">Dinheiro</option>
                 </select>
-    
+
                 <div class="mb-2 mt-2">
                     <button type="submit" class="btn btn-warning">Enviar Pedido</button>
                 </div>
-    
+
                 <div class="form-check mb-2 mt-2">
                     <input class="form-check-input" type="checkbox" value="Aceito os termos" id="termos" name="termos">
                     <label class="form-check-label" for="defaultCheck1" style="font-size: 10px;">
@@ -311,21 +322,21 @@
                         Studio Fotográfico.
                     </label>
                 </div>
-    
-    
-    
+
+
+
             </div>
-           
-           
+
+
 
 
 
         </form>
 
 
-        
 
-        
+
+
 
         <script>
             function countSelectedInputs() {
@@ -382,7 +393,7 @@
                         if (count == 352.5) {
                             count += -52.5;
                         }
-                       
+
                         if (count == 320) {
                             count += -4.9;
                         }
@@ -472,7 +483,7 @@
                         if (count == 352.5) {
                             count += -52.5;
                         }
-                       
+
                         if (count == 320) {
                             count += -4.9;
                         }
@@ -528,7 +539,7 @@
 
     </main>
 
-   <div id="footer"></div>
+    <div id="footer"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
