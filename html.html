@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="minha-div"></div>
+
+	<script>
+		function carregarImagens() {
+			var div_imagens = document.getElementById("imagens");
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/imagens");
+			xhr.onload = function() {
+			  if (xhr.status === 200) {
+				var imagens = JSON.parse(xhr.responseText);
+				for (var i = 0; i < imagens.length; i++) {
+				  var imagem = document.createElement("img");
+				  imagem.src = imagens[i].caminho;
+				  imagem.alt = imagens[i].nome;
+				  div_imagens.appendChild(imagem);
+				}
+			  } else {
+				console.log("Erro ao carregar imagens!");
+			  }
+			};
+			xhr.send();
+		  }
+		  
+		  
+	</script>
+
+	<button onclick="carregarImagens()">Listar Imagens</button>
+
+
+</body>
+</html>
