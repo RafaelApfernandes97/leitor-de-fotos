@@ -16,16 +16,7 @@ img {
     position: relative;
   }
   
-  img:after {
-    content: "";
-    background-image: url(/marcadagua/1.png);
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  }
+ 
 
 html, body {
 	width: 100%;
@@ -116,9 +107,7 @@ html, body {
     width: 100%;
     margin-bottom: 2px;
 }
-.body {
-    
-}
+
 .ocultar-menu {
     display: none;
 }
@@ -169,7 +158,7 @@ html, body {
     
     
     
-} */
+ */
 
 .nome_img {
     position: absolute;
