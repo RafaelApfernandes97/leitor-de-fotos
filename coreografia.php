@@ -1,3 +1,7 @@
+<?php
+(isset($_GET['coreografia'])) ? $num_coreografia = $_GET['coreografia'] : null;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -98,13 +102,17 @@
 
             <?php
             // Caminho para a pasta que contém as imagens
-            $dir = 'COREOGRAFIA 01/';
-
+            // Caminho para a pasta que contém as imagens
+            $dir = 'COREOGRAFIA 0' . "$num_coreografia" . '/';
+           
             // Ler os arquivos na pasta e gerar o código HTML para cada imagem
             $files = scandir($dir);
+            
+            //echo '<img src="COREOGRAFIA 0' . $num_coreografia . '/IMG_1996.JPG" alt="Coreografia">';
             foreach ($files as $file) {
                 if ($file !== '.' && $file !== '..' && is_file($dir . $file) && preg_match('/\.(JPG|jpg|jpeg|png)$/', $file)) {
-                    echo "<div class='lista-img'> <img src='$dir$file' alt='$file' id='img' class='img watermark' onerror='erro(this);' onclick='toggleCheckbox(this); countSelectedInputs(); contador();'  style='opacity: 1;'> <input type='checkbox' id='meuInput' name='imagens' class='checkbox' value='$file' style='display:none;'><div class='marca-dagua'> <img class='marca_dagua' src='img/2.png' alt=></div>          </div>";
+                    echo "<div class='lista-img'> <img src='$dir/$file' alt='$file' id='img' class='img watermark' onerror='erro(this);' onclick='toggleCheckbox(this); countSelectedInputs(); contador();'  style='opacity: 1;'> <input type='checkbox' id='meuInput' name='imagens' class='checkbox' value='$file' style='display:none;'><div class='marca-dagua'> <img class='marca_dagua' src='img/2.png' alt=></div>          </div>";
+                    
                 }
             }
             ?>
