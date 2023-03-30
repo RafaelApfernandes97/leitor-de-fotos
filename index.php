@@ -88,7 +88,7 @@
 
         <div class="container coreografias">
 
-            <div class="card_coreografias"><a class="link" href="coreografia01.php"><img src="/img/02.jpg"
+            <div class="card_coreografias"><a class="link" href="coreografia.php?coreografia=1"><img src="/img/02.jpg"
                         class="img-card" alt="...">
                     <div class="card_titulo">
                         <p class="nome_pasta">COREOGRAFIA 01</p>
@@ -96,28 +96,28 @@
                 </a></div>
 
 
-            <div class="card_coreografias"><a class="link" href="coreografia02.php"><img src="/img/02.jpg"
+            <div class="card_coreografias"><a class="link" href="coreografia.php"><img src="img/02.jpg"
                         class="img-card" alt="...">
                     <div class="card_titulo">
                         <p class="nome_pasta">COREOGRAFIA 02</p>
                     </div>
                 </a></div>
 
-            <div class="card_coreografias"><a class="link" href="coreografia03.php"><img src="/img/02.jpg"
+            <div class="card_coreografias"><a class="link" href="coreografia.php"><img src="/img/02.jpg"
                         class="img-card" alt="...">
                     <div class="card_titulo">
                         <p class="nome_pasta">COREOGRAFIA 03</p>
                     </div>
                 </a></div>
 
-            <div class="card_coreografias"><a class="link" href="coreografia04.php"><img src="/img/02.jpg"
+            <div class="card_coreografias"><a class="link" href="coreografia.php"><img src="/img/02.jpg"
                         class="img-card" alt="...">
                     <div class="card_titulo">
                         <p class="nome_pasta">COREOGRAFIA 04</p>
                     </div>
                 </a></div>
 
-            <div class="card_coreografias"><a class="link" href="coreografia05.php"><img src="/img/02.jpg"
+            <div class="card_coreografias"><a class="link" href="coreografia.php"><img src="/img/02.jpg"
                         class="img-card" alt="...">
                     <div class="card_titulo">
                         <p class="nome_pasta">COREOGRAFIA 05</p>
