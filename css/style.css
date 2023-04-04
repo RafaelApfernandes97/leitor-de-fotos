@@ -12,6 +12,11 @@
   
 }
 
+.main_banner {
+    background-image: url(img/reverence.png);
+    background-repeat: no-repeat;
+}
+
 img {
     position: relative;
   }
@@ -39,10 +44,12 @@ html, body {
     margin-bottom: 30px;
 }
 
-
+.coreografias {
+    margin: 0;
+}
 
 .coreografias {
-    margin-top: 70px;
+   
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
@@ -78,6 +85,7 @@ html, body {
 
 
 .footer {
+  
     background-color: rgb(0, 0, 0);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -217,5 +225,12 @@ img {
 .total_pedido {
     font-weight: bold;
     font-size: 18px;
+}
+
+.sobreposta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
   

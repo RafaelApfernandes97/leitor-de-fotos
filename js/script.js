@@ -49,6 +49,17 @@ function toggleCheckbox(img) {
 
 
 
+const element = document.querySelector('.bloquear-toque');
+
+element.addEventListener('touchstart', function(event) {
+  event.preventDefault();
+});
+
+
+
+
+
+
 
 
 
