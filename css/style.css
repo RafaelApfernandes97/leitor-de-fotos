@@ -1,59 +1,56 @@
 * {
-    -webkit-touch-callout: none; /* desabilita o menu do link de imagem */
-    -webkit-user-select: none; /* desabilita a seleção de texto */
+    -webkit-touch-callout: none;
+    /* desabilita o menu do link de imagem */
+    -webkit-user-select: none;
+    /* desabilita a seleção de texto */
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-  
-}
-
-.main_banner {
-    background-image: url(img/reverence.png);
-    background-repeat: no-repeat;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 img {
     position: relative;
-  }
-  
- 
+}
 
-html, body {
-	width: 100%;
-	
-	margin: 0;	
+
+
+html,
+body {
+    width: 100%;
+
+    margin: 0;
 }
 
 
 
 .body {
     background-color: rgba(128, 128, 128, 0.192);
-    
+
 }
 
 .menu {
     background-color: rgb(5, 5, 5);
 }
 
-.margin-botom{
+.margin-botom {
     margin-bottom: 30px;
 }
 
-.coreografias {
-    margin: 0;
-}
+
 
 .coreografias {
-   
+    margin-top: 70px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
-    
+
 }
 
 .link {
@@ -69,13 +66,14 @@ html, body {
 
 .img-card {
     width: 100%;
-    border-radius: 5px 5px 0 0 ;
+    border-radius: 5px 5px 0 0;
 }
 
 .card_titulo {
-    
+
     text-align: center;
 }
+
 .nome_pasta {
     text-decoration: none;
     color: black;
@@ -85,7 +83,6 @@ html, body {
 
 
 .footer {
-  
     background-color: rgb(0, 0, 0);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -127,26 +124,26 @@ html, body {
 
 
 @media screen and (max-width:900px) {
-  
+
 
     .img {
         width: 100%;
         height: 370px;
         margin-bottom: 2px;
     }
-    
+
 }
 
 @media screen and (max-width:1000px) {
-  
+
 
     .img {
         width: 100%;
         height: 300px;
         margin-bottom: 2px;
     }
-    
-    
+
+
 }
 
 
@@ -163,12 +160,10 @@ html, body {
     top:-3%;
     opacity: 0.5;
     /* display: none; */
-    
-    
-    
- */
 
-.nome_img {
+
+
+*/ .nome_img {
     position: absolute;
     color: rgb(248, 248, 248);
     background-color: black;
@@ -199,27 +194,33 @@ html, body {
 img {
     max-width: 100%;
     height: auto;
-    
-  }
-  
+
+}
+
 
 .marcar_dagua {
     opacity: 0.5;
 }
 
- 
- .lista-img {
+
+.lista-img {
     position: relative;
- }
- 
- .marca-dagua {
-    position: absolute; /* Define a posição do texto como absoluta */
-    top: 50%; /* Define a posição vertical como 50% (centro) */
-    left: 50%; /* Define a posição horizontal como 50% (centro) */
-    transform: translate(-50%, -50%); /* Centraliza o texto no centro da imagem */
-    z-index: 1; /* Define a ordem de empilhamento do texto como 1 (acima da imagem) */
-    color: #fff; /* Define a cor do texto como branco */
-  }
+}
+
+.marca-dagua {
+    position: absolute;
+    /* Define a posição do texto como absoluta */
+    top: 50%;
+    /* Define a posição vertical como 50% (centro) */
+    left: 50%;
+    /* Define a posição horizontal como 50% (centro) */
+    transform: translate(-50%, -50%);
+    /* Centraliza o texto no centro da imagem */
+    z-index: 1;
+    /* Define a ordem de empilhamento do texto como 1 (acima da imagem) */
+    color: #fff;
+    /* Define a cor do texto como branco */
+}
 
 
 .total_pedido {
@@ -227,10 +228,29 @@ img {
     font-size: 18px;
 }
 
-.sobreposta {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
+.tabela-precos {
+    display: none;
+    -webkit-animation: animate-tabela 2s;
 }
-  
+
+@-webkit-keyframes animate-tabela {
+    from {
+        opacity: 0;
+        margin-top: -150px;
+    }
+
+    to {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+#carrinho li{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-weight: bold;
+}
+.btnCarrinho{
+    width: 30%;
+    height: 40%;
+}
