@@ -182,7 +182,7 @@
                 </select>
 
                 <div class="mb-2 mt-2">
-                    <button type="submit" class="btn btn-warning" onclick="finalizarCompra(event, <?php echo $num_coreografia ?>)">Enviar
+                    <button type="submit" class="btn btn-warning" onclick="finalizarCompra(event)">Enviar
                         Pedido</button>
                 </div>
 
