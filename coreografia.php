@@ -2,6 +2,7 @@
         (isset($_GET['coreografia'])) ? $num_coreografia = $_GET['coreografia'] : null;
         ?> -->
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +10,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 
     <title>Leitor de Fotos</title>
 
@@ -24,6 +27,8 @@
 
 
     <script src="js/script.js"></script>
+
+    
 
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script>
@@ -70,11 +75,16 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Contato</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#" onclick="encerrarSessao()">Sair</a>
+
+
+                                <li>
+
                                 </li>
 
                             </ul>
+
+
+
 
                         </div>
 
@@ -136,7 +146,7 @@
             ?>
 
 
-            
+
 
 
 
@@ -150,66 +160,93 @@
 
     </main>
 
-    <div class="carrinho_header">
-        <button class="cart_navbar-toggler button_carrinho">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-            </svg>
-        </button>
-        <nav class="cart_navbar">
-            <div class="carrinho-compras">
-                <ul id="carrinho">
-                    <h3>FOTOS SELECIONADAS</h3>
+
+    <div class="container">
+        <nav class="navbar navbar-nav-scroll menu fixed-top ">
+            <div class="container-fluid ">
+                <button class="cart_navbar-toggler button_carrinho" data-bs-toggle="offcanvas" data-bs-target="#carrinho_lateral" aria-controls="offcanvasNavbar">
+                    <p id="countCarrinho" class="contador_carrinho"></p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                </button>
+
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="carrinho_lateral" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header" style="background-color: black;">
+                        <a class="  navbar-brand" style="color: rgb(255, 255, 255);" href="#"><img style="width: 170px;" src="/leitor/img/logo-menu.png" alt=""></a>
+                        <button style="border: none; background-color: black;" type="button" class="btn btn-light" data-bs-dismiss="offcanvas" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" color="white" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                            </svg></button>
+
+                    </div>
+                    <div class="offcanvas-body ">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                            <li class="nav-item">
+                                <!-- Button trigger modal -->
+                                <a class="nav-link active" onclick="ativarTabela()" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Tabela de Precos</a>
+
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="encerrarSessao()">Limpar Carrinho</a>
+                            </li>
+
+                            <li>
+
+                            </li>
+
+                        </ul>
+
+
+
+
+                        <h1 class="">Fotos Selecionadas</h1>
+                        <div class="carrinho-compras">
+                            <ul id="carrinho" class="ul_carrinho">
+
+                        </div>
+
+                        <h1 class="">Finalize seu pedido</h1>
+                        <input class="form-control mb-2" type="text" placeholder="Nome" aria-label="default input " id="nome" name="nome" required>
+
+                        <div>
+
+                            <p class="total_pedido">Total do pedido: R$<span id="count">00,00</span></p>
+                        </div>
+
+                        <select id="pagamento" require class="form-select form-select-sm" aria-label=".form-select-sm">
+                            <option id="pagamento" value="1" selected>Forma de pagamento</option>
+                            <option id="pagamento" value="Cartão">Cartão</option>
+                            <option id="pagamento" value="Pix">Pix</option>
+                            <option id="pagamento" value="Dinheiro">Dinheiro</option>
+                        </select>
+
+                        <div class="mb-2 mt-2">
+                            <button type="submit" class="btn btn-warning" onclick="finalizarCompra(event)">Enviar
+                                Pedido</button>
+                        </div>
+
+                        <div class="form-check mb-2 mt-2">
+                            <input class="form-check-input" type="checkbox" value="Aceito os termos" id="termos" name="termos">
+                            <label class="form-check-label" for="defaultCheck1" style="font-size: 10px;">
+                                Estou ciente de que as imagens feitas neste evento, são de propriedade e de uso livre do mesmo,
+                                sendo assim podem ser divulgadas nas redes sociais oficiais do festival e do Ballet em Foco
+                                Studio Fotográfico.
+                            </label>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
             </div>
-
-            <div class="container form_pedido">
-
-
-
-                <h1 class="">Finalize o seu pedido</h1>
-
-                <input class="form-control mb-2" type="text" placeholder="Nome" aria-label="default input " id="nome" name="nome" required>
-
-                <div>
-                    <p class="total_pedido">Total do pedido: R$<span id="count">00,00</span></p>
-                </div>
-
-                <select id="pagamento" class="form-select form-select-sm" aria-label=".form-select-sm">
-                    <option id="pagamento" value="1" selected>Forma de pagamento</option>
-                    <option id="pagamento" value="Cartão">Cartão</option>
-                    <option id="pagamento" value="Pix">Pix</option>
-                    <option id="pagamento" value="Dinheiro">Dinheiro</option>
-                </select>
-
-                <div class="mb-2 mt-2">
-                    <button type="submit" class="btn btn-warning" onclick="finalizarCompra(event)">Enviar
-                        Pedido</button>
-                </div>
-
-                <div class="form-check mb-2 mt-2">
-                    <input class="form-check-input" type="checkbox" value="Aceito os termos" id="termos" name="termos">
-                    <label class="form-check-label" for="defaultCheck1" style="font-size: 10px;">
-                        Estou ciente de que as imagens feitas neste evento, são de propriedade e de uso livre do mesmo,
-                        sendo assim podem ser divulgadas nas redes sociais oficiais do festival e do Ballet em Foco
-                        Studio Fotográfico.
-                    </label>
-                </div>
-
-
-
-            </div>
-
         </nav>
     </div>
 
-    <script>
-        const navbarToggler = document.querySelector('.cart_navbar-toggler');
-        const navbar = document.querySelector('.cart_navbar');
 
-        navbarToggler.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-        });
-    </script>
 
 
 

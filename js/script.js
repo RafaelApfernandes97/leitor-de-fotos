@@ -20,11 +20,11 @@ function erro(elemento) {
 
 
 // Não deixar copiar a foto 
-window.onload = function () {
-    // document.getElementById("img").oncontextmenu = function()
+document.addEventListener("DOMContentLoaded", function () {
+    minhaFuncao();
+});
 
-
-
+function minhaFuncao() {
     document.oncontextmenu = function () {
         alert("Divulgação Proibida Ballet em Foco.")
         return false;
@@ -59,7 +59,7 @@ function adicionarNoCarrinho(img) {
     var carrinho = document.getElementById("carrinho");
     var item = document.createElement("li");
     item.style.marginBottom = "5px";
-    item.innerHTML = "<img src='" + img.src + "'>" + img.alt + "<a onclick='removerItem(this)'><i class='bi bi-trash item-remove-icon'></a>";
+    item.innerHTML = "<img src='" + img.src + "'>" + img.alt + "<a onclick='removerItem(this)'><span class='rem_item_carrinho item_remove_icon'>EXCLUIR</span><i class='bi bi-x-square'></i></a>";
     carrinho.appendChild(item);
 
     // Salvar carrinho de compras na sessão
@@ -67,6 +67,8 @@ function adicionarNoCarrinho(img) {
     carrinhoSalvo.push(img.src);
     localStorage.setItem("carrinho", JSON.stringify(carrinhoSalvo));
     calculaPreco();
+
+
 }
 
 function removerDoCarrinho(img) {
@@ -114,9 +116,13 @@ function carregarCarrinhoSalvo() {
     for (var i = 0; i < carrinhoSalvo.length; i++) {
         var item = document.createElement("li");
         item.style.marginBottom = "10px";
-        item.innerHTML = "<img src='" + carrinhoSalvo[i] + "'>" + carrinhoSalvo[i].split('/').pop() + "<a onclick='removerItem(this)'><i class='bi bi-trash'></a>";
+        item.innerHTML = "<img src='" + carrinhoSalvo[i] + "'>" + carrinhoSalvo[i].split('/').pop() + "<a onclick='removerItem(this)'><span class='rem_item_carrinho item_remove_icon'>EXCLUIR</span><i class='bi bi-x-square'></i></a>";
         carrinho.appendChild(item);
     }
+
+
+
+
 }
 
 /* Fim do carrinho de compras*/
@@ -162,6 +168,10 @@ function encerrarSessao() {
     localStorage.removeItem("carrinho");
     window.location.href = "index.php";
 }
+
+
+
+
 
 
 

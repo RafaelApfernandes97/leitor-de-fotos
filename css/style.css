@@ -249,6 +249,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     font-weight: bold;
+    
 }
 
 .btnCarrinho {
@@ -258,7 +259,6 @@ img {
 
 
 .button_carrinho {
-
     background-color: #FFE100;
     border-radius: 100%;
     border: none;
@@ -316,13 +316,24 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+    .contador_carrinho {
+        display: block;
+        cursor: pointer;
+        float:right;
+        position: absolute;
+        left: 83%;
+        top: 88%;
+        z-index: 76;
+        color: rgb(255, 0, 0);
+    }
+
     .cart_navbar-toggler {
         display: block;
         cursor: pointer;
         position: fixed;
         left: 83%;
         top: 88%;
-        z-index: 1;
+        z-index: 3;
     }
 
     .cart_navbar {
@@ -334,4 +345,40 @@ img {
         top: 0;
         left: 15%;
     }
+}
+
+
+.menu_carrinho {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   padding: 0;
+}
+
+.btn_li_carrinho {
+    text-decoration: none;
+    text-align: center;
+    background-color: #FFC107;
+    font-size: 16px;
+    color: black;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+
+.carrinho-compras {
+    padding: 0;
+}
+
+.ul_carrinho {
+    padding: 0;
+    margin: 0;
+    
+}
+
+.rem_item_carrinho {
+    color: red;
+}
+
+.icon_rem_carrinho {
+    background-color: red;
 }
