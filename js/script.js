@@ -120,9 +120,6 @@ function carregarCarrinhoSalvo() {
         carrinho.appendChild(item);
     }
 
-
-
-
 }
 
 /* Fim do carrinho de compras*/
@@ -131,6 +128,9 @@ function carregarCarrinhoSalvo() {
 function calculaPreco() {
     var carrinhoSalvo = JSON.parse(localStorage.getItem("carrinho")) || [];
     var pPreco = document.getElementById('count');
+    /* Preencher p com a quantidade de itens no carrinho */
+    var qtdItens = document.getElementById('countCarrinho');
+    qtdItens.innerHTML = carrinhoSalvo.length;
     let precoImagem = 20;
 
     let qtdImagens = carrinhoSalvo.length;
