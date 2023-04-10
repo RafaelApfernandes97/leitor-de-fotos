@@ -143,7 +143,7 @@ function calculaPreco() {
     }
 
     let precoTotal = precoImagem * qtdImagens;
-    pPreco.innerHTML = `${precoTotal.toFixed(2)} `;
+    pPreco.innerHTML = `${precoTotal.toFixed(2).toString().replace(".", ",")} `;
 
 }
 // Função para enviar mensagem no whatsapp
