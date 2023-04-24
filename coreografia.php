@@ -130,7 +130,7 @@
 
 
             <?php
-            // Caminho para a pasta que contém as imagens
+            
             // Caminho para a pasta que contém as imagens
             $dir = 'COREOGRAFIAS/COREOGRAFIA ' . "$num_coreografia" . '/';
 

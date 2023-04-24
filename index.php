@@ -103,17 +103,22 @@
 
         <div class="container coreografias">
             <?php
-            $dir = "COREOGRAFIAS/"; 
-            
-            // obter lista de arquivos e diretórios no diretório
+            function cmp($a, $b)
+            {
+                $a = intval(substr($a, strrpos($a, ' ') + 1));
+                $b = intval(substr($b, strrpos($b, ' ') + 1));
+                return $a - $b;
+            }
+
+            $dir = 'COREOGRAFIAS/';
             $lista = scandir($dir);
+            usort($lista, "cmp");
 
-            
+            // Iterar sobre a lista ordenada de diretórios
             foreach ($lista as $item) {
-                if (is_dir($dir . "/" . $item) && $item != "." && $item != "..") {
-                    $numero = substr($item, strrpos($item, " ") + 1); // extrair o número da pasta
-
-                    $caminho = 'COREOGRAFIAS/COREOGRAFIA '. $numero;
+                if ($item != '.' && $item != '..' && is_dir($dir . '/' . $item)) {
+                    $numero = substr($item, strrpos($item, ' ') + 1);
+                    $caminho = 'COREOGRAFIAS/COREOGRAFIA ' . $numero;
                     $arquivos = scandir($caminho);
                     $imagens = array();
                     foreach ($arquivos as $arquivo) {
@@ -124,7 +129,7 @@
                     }
                     if (!empty($imagens)) {
                         $imagem_aleatoria = $imagens[array_rand($imagens)];
-                        echo '<div class="card_coreografias"> <a class="link" href="coreografia.php?coreografia='.$numero.' " > <img src="' . $caminho . '/' . $imagem_aleatoria . '" class="img-card" > <div class="card_titulo"><p                                class="nome_pasta">COREOGRAFIA '.$numero.'</p> </div> </a> </div>';
+                        echo '<div class="card_coreografias"> <a class="link" href="coreografia.php?coreografia=' . $numero . ' " > <img src="' . $caminho . '/' . $imagem_aleatoria . '" class="img-card" > <div class="card_titulo"><p                                class="nome_pasta">COREOGRAFIA ' . $numero . '</p> </div> </a> </div>';
                     }
                 }
             }
@@ -134,7 +139,7 @@
 
     </main>
 
-    
+
 
     <footer>
         <div class="footer">
